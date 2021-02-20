@@ -1,0 +1,534 @@
+body {
+  font-family: "DINNextLTW23-Light", sans-serif;
+}
+
+/*************************** Navbar **************************/
+nav {
+  height: 80px;
+  background-color: #1d212b;
+  border-bottom: gray;
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
+}
+
+nav img {
+  width: 150px;
+  position: absolute;
+  top: 25px;
+  left: 12%;
+}
+
+nav ul {
+  float: right;
+  margin-right: 12%;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0px 15px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 15px;
+  position: relative;
+  padding-bottom: 32px;
+}
+
+nav ul li a::before {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 50%;
+  position: absolute;
+  background: #f58533;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.active {
+  color: #c26d31;
+}
+
+.active::before {
+  color: #c26d31;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  background: #f58533;
+  width: 100%;
+}
+
+label #btn,
+label #cancel {
+  color: #f58533;
+  font-size: 30px;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 0;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 1118px) {
+}
+
+@media (max-width: 860px) {
+  label #btn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: #1d212b;
+    top: 80px;
+    left: -100%;
+    text-align: left;
+    transition: all 0.5s;
+    z-index: 10000;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0px;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  #check:checked ~ label #btn {
+    display: none;
+  }
+
+  #check:checked ~ label #cancel {
+    display: block;
+  }
+}
+/*************************** Navbar **************************/
+
+/*************************** Scroll button **************************/
+.middle {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+}
+
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+}
+
+.mouse::before {
+  height: 6px;
+  width: 6px;
+  content: " ";
+  background-color: #fff;
+  top: 10px;
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  animation: mouse 2s infinite;
+  margin-left: -5px;
+}
+
+@keyframes mouse {
+  from {
+    opacity: 1;
+    top: 10px;
+  }
+
+  to {
+    opacity: 0;
+    top: 40px;
+  }
+}
+/*************************** Scroll button **************************/
+
+/*************************** Social media icons **************************/
+.icons .facebook,
+.icons .twitter,
+.icons .youtube,
+.icons .linkedin {
+  height: 36px;
+  width: 36px;
+  position: relative;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+
+.facebook i,
+.twitter i,
+.youtube i,
+.linkedin i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.facebook:hover {
+  background-color: #1877f2;
+}
+
+.twitter:hover {
+  background-color: #1da1f2;
+}
+
+.youtube:hover {
+  background-color: #ff0000;
+}
+
+.linkedin:hover {
+  background-color: #0a66c2;
+}
+/*************************** Social media icons **************************/
+
+/* ---- Marketing section ---- */
+.text-orange {
+  color: #ff8016;
+}
+
+.num span {
+  font-size: 5em;
+  color: #000;
+  font-weight: 600;
+}
+
+.num p {
+  font-weight: bold;
+}
+
+.header h1 {
+  font-weight: 300;
+  display: inline-block;
+  padding-bottom: 24px;
+  position: relative;
+}
+.header h1:before {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 1px;
+  bottom: 0;
+  left: 35%;
+  border-bottom: 10px solid #f58533;
+}
+
+.parallex {
+  background-image: url("./assets/parallex.jpg");
+  background-attachment: fixed;
+}
+
+.button {
+  border: 1px solid #ff8016;
+  padding: 15px 50px;
+  color: #fff;
+  margin: 30px 0 0 0;
+  transition: all 0.1s ease-in-out;
+  background: transparent;
+}
+
+.button:hover {
+  background-color: #ff8016;
+}
+
+h4 {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #5f626a;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+  font-size: 16px;
+}
+
+h4 .title1 {
+  color: #3a3c3f;
+}
+
+h4 .title2 {
+  color: #5f626a;
+}
+
+h4 span {
+  background: #1d212c;
+}
+
+.clip-text p {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.3;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  width: 85%;
+  color: white;
+}
+
+.clip-text .text1 {
+  text-transform: uppercase;
+  background: linear-gradient(to right, #019ef3 0%, #15d5d9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.clip-text .text2 {
+  text-transform: uppercase;
+  background: linear-gradient(to right, #f58533 0%, #e7586e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.con-logo img {
+  background-color: #fff;
+}
+/* ---- Marketing section ---- */
+
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: #1d212b;
+  background-image: url("");
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.main-title {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.main-title h1 {
+  font-size: 55px;
+}
+/* ---- particles.js container ---- */
+
+
+/*************************** Circles animation **************************/
+.outCircle {
+  width: 70%;
+  height: 30%;
+  left: 12%;
+  position: absolute;
+  bottom: 0;
+  -moz-border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border-radius: 100px;
+}
+
+.rotate {
+  width: 100%;
+  height: 100%;
+  -webkit-animation: circle 10s infinite linear;
+}
+
+.inner {
+  width: 150px;
+  height: 150px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 100px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-color: #F58533;
+  border: 10px solid #F58533;
+  background-color: transparent;
+  display: block;
+
+}
+
+.inner1 {
+  width: 180px;
+  height: 180px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0px;
+  top: 300px;
+  background-color: #5946FF;
+  border: 10px solid #5946FF;
+  background: transparent;
+  display: block;
+
+}
+
+.inner2 {
+  width: 200px;
+  height: 200px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0px;
+  top: 600px;
+  background-color: #E7586E;
+  border: 10px solid #E7586E;
+  background: transparent;
+  display: block;
+
+}
+
+@-webkit-keyframes circle {
+  from {
+      -webkit-transform: rotateZ(50deg)
+  }
+
+  to {
+      -webkit-transform: rotateZ(180deg)
+  }
+}
+/*************************** Circles animation **************************/
+
+
+/*************************** Logos section **************************/
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flexContainer {
+  display: flex;
+}
+
+.flexContainer2 {
+  display: none;
+}
+
+.flexChild {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.div1 {
+  background-color: rgb(33, 34, 36);
+  height: 600px;
+  width: 30%;
+  position: relative;
+}
+
+.div2 {
+  background-color: rgb(205, 37, 38);
+  height: 50%;
+  width: 33.33%;
+  position: relative;
+}
+
+.div3 {
+  background-color: rgb(0, 132, 233);
+  height: 50%;
+  width: 33.33%;
+  position: relative;
+}
+
+.div4 {
+  background-color: rgb(39, 40, 41);
+  height: 50%;
+  width: 33.33%;
+  position: relative;
+}
+
+.div5 {
+  background-color: rgb(39, 40, 41);
+  height: 50%;
+  width: 33.33%;
+  position: relative;
+}
+
+.div6 {
+  background-color: rgb(30, 46, 56);
+  height: 50%;
+  width: 33.33%;
+  position: relative;
+}
+
+.div7 {
+  background-color: rgb(1, 153, 109);
+  height: 50%;
+  width: 33.33%;
+  position: relative;
+}
+
+
+@media (max-width: 690px) {
+  .flexContainer {
+      display: none;
+  }
+
+  .flexContainer2 {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: rgb(39, 40, 41);
+  }
+
+  .div1,
+  .div2,
+  .div3,
+  .div4,
+  .div5,
+  .div6,
+  .div7 {
+      width: 50%;
+      height: 300px;
+  }
+}
+/*************************** Logos section **************************/
+
+/*************************** Footer **************************/
+footer {
+  overflow: hidden;
+  height: auto;
+  width: 100%;
+  display: block;
+  background: #1d212b;
+  padding: 15px 0;
+  box-sizing: border-box;
+  color: white;
+}
+/*************************** Footer **************************/
